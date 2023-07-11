@@ -4,7 +4,9 @@ from django.db import models
 class Galery(models.Model):
     name = models.CharField(
         max_length=50,
-        verbose_name='Название изображения'
+        blank=True,
+        default='Название не было добавлено',
+        verbose_name='Название изображения',
         )
     image = models.ImageField(upload_to='images')
     description = models.TextField(
@@ -14,7 +16,7 @@ class Galery(models.Model):
 
     class Meta:
         verbose_name = "Изображение"
-        verbose_name_plural = "s"
+        verbose_name_plural = "Изображения"
 
     def __str__(self):
         return self.name
