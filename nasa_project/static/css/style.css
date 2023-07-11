@@ -1,0 +1,67 @@
+@font-face {
+    font-weight: 400; /* Соответствует значению normal */
+    font-family: 'Montserrat';
+    src: url("css/fonts/Montserrat-Regular.ttf");
+    color: white;
+}
+
+@font-face {
+    font-weight: 700; /* Соответствует значению bold */
+    font-family: 'Montserrat';
+    src: url("css/fonts/Montserrat-Bold.ttf");
+    color: white;
+}
+
+@font-face {
+    font-weight: 600;
+    font-family: 'Montserrat';
+    src: url("css/fonts/Montserrat-SemiBold.ttf");
+    color: white;
+  }
+
+
+.navbar {
+    height: 90px;
+}
+
+p {
+    font-family: 'Montserrat';
+    font-size: 16px;
+  }
+
+.fuf-logo {
+    width: 120px;
+}
+
+.container-fluid {
+    padding: 0px 150px 0px 150px;
+}
+
+.nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 19.5px;
+    letter-spacing: 2px;
+}
+
+.about-agency {
+    padding: 90px 150px;
+    text-align: center;
+}
+
+.h1 {
+    font-weight: 700;
+    size: 56px;
+    line-height: 68px;
+}
+
+.text-detail-about-agency {
+    font-weight: 400;
+    size: 18px;
+    line-height: 30px;
+}
+
+.btn {
+    width: 50px;
+}
