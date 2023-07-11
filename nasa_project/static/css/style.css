@@ -25,9 +25,8 @@
 }
 
 p {
-    font-family: 'Montserrat';
     font-size: 16px;
-  }
+}
 
 .fuf-logo {
     width: 120px;
@@ -46,7 +45,7 @@ p {
 }
 
 .about-agency {
-    padding: 90px 150px;
+    padding-top: 90px;
     text-align: center;
 }
 
@@ -54,14 +53,41 @@ p {
     font-weight: 700;
     size: 56px;
     line-height: 68px;
+    margin-bottom: 30px;
 }
 
 .text-detail-about-agency {
     font-weight: 400;
     size: 18px;
     line-height: 30px;
+    margin-bottom: 90px;
 }
 
-.btn {
-    width: 50px;
+.block-text-item {
+    padding: 20px;
 }
+
+.text-items {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 10px 15px;
+}
+
+.pictures-big-right-container {
+    width: 447px;
+    height: 447px;
+    border-radius: 40px;
+}
+
+.exmpl {
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items: right;
+  }
+.exmpl img {
+    height: 100%;
+    width: auto;
+  }
+

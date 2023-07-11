@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'nasa_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'space',
+        'USER': 'root',
+        'PASSWORD': '9559!!nYT',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
