@@ -91,3 +91,11 @@ p {
     width: auto;
   }
 
+.slider {
+    position: relative;
+
+}
+
+.slider img {
+    max-width: 100%;
+}
