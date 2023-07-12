@@ -93,9 +93,61 @@ p {
 
 .slider {
     position: relative;
-
 }
 
-.slider img {
-    max-width: 100%;
+/* фон в слайдере заменили на темный */
+.modal-content {
+    background-color: rgb(29, 29, 29);
 }
+
+/* картинка в слайдере является фоном, делаем его по центру, без повторений */
+.slider_item {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 48vh;
+    z-index: 3;
+}
+/* кнопка слайдера назад */
+.slick-prev {
+    right: 95%;
+    font-size: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: all 0.2s;
+}
+
+/* кнопка слайдера вперед */
+.slick-next {
+    left: 95%;
+    font-size: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: all 0.2s;
+}
+
+.slick-arrow:hover {
+    opacity: 0.8;
+}
+
+/* хотел сделать стрелочки, но перехотел. Кругляшки мне нравятся больше */
+/* .slick-arrow:after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: rotate(45deg);
+} */

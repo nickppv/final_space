@@ -37,7 +37,7 @@
             
             <!-- Modal Body -->
             <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-            <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            {% comment %} <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
               <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -54,7 +54,7 @@
                 </div>
               </div>
             </div>
-            
+             {% endcomment %}
             
             <!-- Optional: Place to the bottom of scripts -->
             <script>
@@ -72,7 +72,7 @@
         <p class="text-detail-about-agency">Национальное управление по аэронавтике и исследованию космического пространства - ведомство, относящееся к федеральному правительству США и подчиняющееся непосредственно президенту США</p>
       </div>
 
-      <div class="row" style="border: black solid 1px">
+      <div class="row">
         <div class="col-xl-6 col-md-12 col-sm-12 mx-auto pictures-small-left">
           <div>
             <div class="row">
@@ -99,17 +99,40 @@
         </div>
         <div class="col-xl-6 col-md-12 col-sm-12 mx-auto ">
           <div class="pictures-big-right-container exmpl mx-auto">
-            <img class="preview-img-square" src="https://sunplanets.info/wp-content/uploads/2019/11/foto-mlechnogo-puti-na-nochnom-nebe-970x545.jpg" >
+
+            <!-- Button trigger modal -->
+            <button type="button" style="border: 0px; outline: 0px" data-bs-toggle="modal" data-bs-target="#modalId" >
+              <img src={{ last_picture.image.url }}>
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+              <div class="modal-dialog modal-sm modal-fullscreen" role="document">
+                <div class="modal-content mx-auto">
+
+                  <div class="modal-body">
+                    <div class="slider">
+                      {% for i in all_pictures %}
+                        <div class="slider_item" style="background-image: url({{ i.image.url }}); "></div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary mx-auto" data-bs-dismiss="modal">Хватит это терпеть!</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div> 
-        <div class="slider">
-          {% for i in all_pictures %}
-            <div><img src={{ i.image.url }}></div>
-          {% endfor %}
-
-      </div>
     </div>
+
+
+
+    
+   
+    
 
 
 
