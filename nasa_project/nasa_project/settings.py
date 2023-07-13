@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'filer',
     'space_agency.apps.SpaceAgencyConfig',
+    'adminsortable2',
 ]
 
 MIDDLEWARE = [

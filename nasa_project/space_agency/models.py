@@ -1,6 +1,5 @@
 from django.db import models
 from filer.fields.image import FilerImageField
-from filer.fields.file import FilerFileField
 
 
 class Galery(models.Model):
@@ -11,6 +10,7 @@ class Galery(models.Model):
         verbose_name='Название изображения',
         )
     image = FilerImageField(
+        db_index=True,
         null=True,
         blank=True,
         related_name='image_galery',
@@ -24,6 +24,8 @@ class Galery(models.Model):
     class Meta:
         verbose_name = "Изображение"
         verbose_name_plural = "Изображения"
+
+        ordering = ['image']
 
     def __str__(self):
         return self.name
