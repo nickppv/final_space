@@ -101,12 +101,19 @@ p {
 }
 
 /* картинка в слайдере является фоном, делаем его по центру, без повторений */
-.slider_item {
-    height: 90vh;
+.basic_slider {
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+.slider-nav .item {
+    width: 50px;
+    height: 50px;
+    background: red;
+    margin-right: 30px;
+    overflow: hidden;
+  }
 
 .slick-arrow {
     position: absolute;
@@ -139,8 +146,7 @@ p {
     opacity: 0.8;
 }
 
-/* хотел сделать стрелочки, но перехотел. Кругляшки мне нравятся больше
-   на всякий случай пока оставлю */
+/* хотел сделать стрелочки, но перехотел. Кругляшки мне нравятся больше */
 /* .slick-arrow:after {
     content: '';
     display: block;

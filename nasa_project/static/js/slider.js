@@ -1,23 +1,34 @@
+$('.slider').slick({
+  autoplay: true,
+  speed: 200,
+  pauseOnHover: false,
+  pauseOnFocus: false,
+  fade: true,
+});
+
 // $('.slider').slick({
-//   dots: true,
+//   dots: false,
 //   infinite: true,
 //   speed: 300,
 //   slidesToShow: 1,
 //   adaptiveHeight: true
 // });
 
-// $('.slider').slick({
-//   dots: true,
-//   infinite: true,
+// $(".slider-for").slick({
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
 //   speed: 500,
+//   arrows: false,
 //   fade: true,
-//   cssEase: 'linear'
+//   asNavFor: ".slider-nav"
 // });
-
-$('.slider').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  adaptiveHeight: true
-});
+// $(".slider-nav").slick({
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   speed: 500,
+//   asNavFor: ".slider-for",
+//   dots: true,
+//   centerMode: true,
+//   focusOnSelect: true,
+//   slide: "div"
+// });
