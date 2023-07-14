@@ -17,19 +17,18 @@
     font-family: 'Montserrat';
     src: url("css/fonts/Montserrat-SemiBold.ttf");
     color: white;
-  }
-
+}
 
 .navbar {
     height: 90px;
 }
 
-p {
-    font-size: 16px;
+.logo {
+    width: 120px;
 }
 
-.fuf-logo {
-    width: 120px;
+button[data-bs-toggle="collapse"] {
+    margin-right: 35px;
 }
 
 .container-fluid {
@@ -37,6 +36,7 @@ p {
 }
 
 .nav-link {
+    margin: 0px 22px;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -85,11 +85,12 @@ p {
     display: flex;
     justify-content:center;
     align-items: right;
-  }
+}
+
 .exmpl img {
     height: 100%;
     width: auto;
-  }
+}
 
 .slider {
     position: relative;
@@ -113,6 +114,7 @@ p {
     top: 48vh;
     z-index: 3;
 }
+
 /* кнопка слайдера назад */
 .slick-prev {
     right: 95%;
@@ -138,17 +140,3 @@ p {
 .slick-arrow:hover {
     opacity: 0.8;
 }
-
-/* хотел сделать стрелочки, но перехотел. Кругляшки мне нравятся больше
-   на всякий случай пока оставлю */
-/* .slick-arrow:after {
-    content: '';
-    display: block;
-    width: 15px;
-    height: 15px;
-    background-color: #000;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    transform: rotate(45deg);
-} */

@@ -2,41 +2,32 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <title>NASA</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Панель навигации -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-
       <div class="container">
-        
         <div class="col-lg-1 col-sm-6">
           <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#"><img class="fuf-logo" src="{% static 'img\logo.png' %}" alt="NASA"></a>
+          <a class="navbar-brand" href="#"><img class="logo" src="{% static 'img\logo.png' %}" alt="NASA"></a>
         </div>
-
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <span class="nav-item-first navbar-nav"><a class="nav-link text-light" aria-current="page" href="#">преимущества</a></span>
           <span class="nav-item-second navbar-nav"><a class="nav-link text-light" href="#">фотографии</a></span>
         </div>
-
-        <div class="col-lg-1">
-            <!-- Modal trigger button -->
-            <button type="button" class="btn btn-danger text-white btn-lg" data-bs-toggle="modal" data-bs-target="#modalId2">
-              Вход
-            </button>
-            
+        <div>
+          <!-- Modal trigger button -->
+          <button type="button" class="btn btn-danger text-white btn-lg button-auth" data-bs-toggle="modal" data-bs-target="#modalId2">Вход</button>
             <!-- Modal Body -->
-            <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
             <div class="modal fade" id="modalId2" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
               <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
                 <div class="modal-content"  style="border: 2px solid black; border-radius: 7px">
@@ -62,86 +53,75 @@
                 </div>
               </div>
             </div>
-            <!-- Optional: Place to the bottom of scripts -->
-            <script>
-              const myModal = new bootstrap.Modal(document.getElementById('modalId2'), options)
-            </script>
         </div>
-
       </div>
     </nav>
-    <div class="col-md-8 col-sm-12 mx-auto about-agency">
-      <div>
-        <h1 class="h1">Космическое агенство</h1>
-        <p class="text-detail-about-agency">Национальное управление по аэронавтике и исследованию космического пространства - ведомство, относящееся к федеральному правительству США и подчиняющееся непосредственно президенту США</p>
-      </div>
-
-      <div class="row">
-        <div class="col-xl-6 col-md-12 col-sm-12 mx-auto pictures-small-left">
-          <div>
-            <div class="row">
-              <div class="col-sm-6 col-md-6 block-text-item">
-                <img src="{% static 'img\spaceship.png' %}">
-                <p class="text-items">Спейс-шаттлы - пилотируемые корабли</p>
+      <div class="col-md-8 col-sm-12 mx-auto about-agency">
+        <div>
+          <h1 class="h1">Космическое агенство</h1>
+          <p class="text-detail-about-agency">
+            Национальное управление по аэронавтике и исследованию космического пространства - ведомство,
+            относящееся к федеральному правительству США и подчиняющееся непосредственно президенту США</p>
+        </div>
+        <div class="row">
+          <div class="col-xl-6 col-md-12 col-sm-12 mx-auto pictures-small-left">
+            <div>
+              <div class="row">
+                <div class="col-sm-6 col-md-6 block-text-item">
+                  <img src="{% static 'img\spaceship.png' %}">
+                  <p class="text-items">Спейс-шаттлы - пилотируемые корабли</p>
+                </div>
+                <div class="col-sm-6 col-md-6 block-text-item">
+                  <img src="{% static 'img\telescope.png' %}">
+                  <p class="text-items">Лучшее телескопическое оборудование</p>
+                </div>
               </div>
-              <div class="col-sm-6 col-md-6 block-text-item">
-                <img src="{% static 'img\telescope.png' %}">
-                <p class="text-items">Лучшее телескопическое оборудование</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6 col-md-6 block-text-item">
-                <img src="{% static 'img\stars.png' %}">
-                <p class="text-items">Целимся на Луну и Марс</p>
-              </div>
-              <div class="col-sm-6 col-md-6 block-text-item">
-                <img src="{% static 'img\reward.png' %}">
-                <p class="text-items">Золотая медаль по научным исследованиям</p>
+              <div class="row">
+                <div class="col-sm-6 col-md-6 block-text-item">
+                  <img src="{% static 'img\stars.png' %}">
+                  <p class="text-items">Целимся на Луну и Марс</p>
+                </div>
+                <div class="col-sm-6 col-md-6 block-text-item">
+                  <img src="{% static 'img\reward.png' %}">
+                  <p class="text-items">Золотая медаль по научным исследованиям</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-xl-6 col-md-12 col-sm-12 mx-auto ">
-          <div class="pictures-big-right-container exmpl mx-auto">
-
-            <!-- Button trigger modal -->
-            <button type="button" style="border: 0px; outline: 0px" data-bs-toggle="modal" data-bs-target="#modalId" >
-              <img src={{ preview_picture.image.url }}>
-            </button>
-            
-            <!-- Modal -->
-            <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-              <div class="modal-dialog modal-sm modal-fullscreen" role="document">
-                <div class="modal-content mx-auto">
-
-                  <div class="modal-body">
-                    <div class="slider">
-                      {% for i in all_pictures %}
-                        <div class="slider_item" style="background-image: url({{ i.image.url }});">
-                          <div style="color: white; font-size: 20px; text-shadow: #000 2px 1px 3px; opacity: 0.5;">{{ i.name }}</div>
-                          <div class="fixed-bottom" style="position:absolute; bottom:0; color: white; font-size: 20px; text-shadow: #000 2px 1px 3px; opacity: 0.5;">{{ i.description }}</div>
-                        </div>
-                      {% endfor %}
+          <div class="col-xl-6 col-md-12 col-sm-12 mx-auto ">
+            <div class="pictures-big-right-container exmpl mx-auto">
+              <!-- Button trigger modal -->
+              <button type="button" style="border: 0px; outline: 0px" data-bs-toggle="modal" data-bs-target="#modalId" >
+                <img src={{ preview_picture.image.url }}>
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                <div class="modal-dialog modal-sm modal-fullscreen" role="document">
+                  <div class="modal-content mx-auto">
+                    <div class="modal-body">
+                      <div class="slider">
+                        {% for i in all_pictures %}
+                          <div class="slider_item" style="background-image: url({{ i.image.url }});">
+                            <div style="color: white; font-size: 20px; text-shadow: #000 2px 1px 3px; opacity: 0.5;">{{ i.name }}</div>
+                            <div class="fixed-bottom" style="position:absolute; bottom:0; color: white; font-size: 20px; text-shadow: #000 2px 1px 3px; opacity: 0.5;">{{ i.description }}</div>
+                          </div>
+                        {% endfor %}
+                      </div>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary mx-auto" data-bs-dismiss="modal">{{ modal_answer }}</button>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-secondary mx-auto" data-bs-dismiss="modal">{{ modal_answer }}</button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div> 
-    </div>
-
-
-  <script src="{% static 'js\jquery-3.7.0.min.js' %}"></script>
-  <script src="{% static 'js\bootstrap.bundle.min.js' %}"></script>
-  {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> {% endcomment %}
-  {% comment %} <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> {% endcomment %}
-  <script src="{% static 'js\slick.min.js' %}"></script>
-  <script src="{% static 'js\slider.js' %}"></script>
-
+        </div> 
+      </div>
+    <script>const myModal = new bootstrap.Modal(document.getElementById('modalId2'), options)</script>
+    <script src="{% static 'js\jquery-3.7.0.min.js' %}"></script>
+    <script src="{% static 'js\bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js\slick.min.js' %}"></script>
+    <script src="{% static 'js\slider.js' %}"></script>
 </body>
 </html>
